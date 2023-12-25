@@ -8,7 +8,8 @@
     "IIpho3nix"
   ],
   "contact": {
-    "website": "https://iipho3nix.me"
+    "website": "https://iipho3nix.me",
+    "sources": "https://github.com/IIpho3nix/IIpho3nix-s-Capes-Mod"
   },
   "license": "GPL-3.0",
   "icon": "assets/iicapemod/icon.png",

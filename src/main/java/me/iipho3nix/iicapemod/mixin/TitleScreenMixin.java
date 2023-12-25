@@ -24,7 +24,7 @@ public class TitleScreenMixin extends Screen {
 
     @Inject(at = @At("TAIL"), method = "init")
     private void init(CallbackInfo ci) {
-            this.addDrawableChild(ButtonWidget.builder(Text.literal("Chane Cape"), (button) -> {
+            this.addDrawableChild(ButtonWidget.builder(Text.literal("Change Cape"), (button) -> {
                 if (CapesMod.list.indexOf(CapesMod.cape) + 1 == CapesMod.list.size()) {
                     CapesMod.cape = CapesMod.list.get(0);
                     CapesMod.capeCacheIdentifier = null;
