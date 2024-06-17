@@ -95,6 +95,9 @@ public class CapesMod implements ModInitializer {
                     IdentifierUtils.registerBufferedImageTexture(capeCacheIdentifier, img);
                     lastCache = cape;
                 }
+            } else {
+                capeCacheIdentifier = null;
+                lastCache = cape;
             }
         } else {
             if (cape.endsWith(".gif")) {
