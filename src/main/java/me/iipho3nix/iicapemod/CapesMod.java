@@ -72,7 +72,7 @@ public class CapesMod implements ModInitializer {
                         for (int i = 0; i < frameCount; i++) {
                             final BufferedImage img = gif.getFrame(i);
                             final int delay = gif.getDelay(i);
-                            frameIdentifier = new Identifier(MOD_ID, "capes_" + RandomUtils.randomStringLowercase(10));
+                            frameIdentifier = Identifier.of(MOD_ID, "capes_" + RandomUtils.randomStringLowercase(10));
                             IdentifierUtils.registerBufferedImageTexture(frameIdentifier, img);
                             anicape.add(new AnimatedCapeData(frameIdentifier, delay));
                         }
@@ -91,7 +91,7 @@ public class CapesMod implements ModInitializer {
                         e.printStackTrace();
                     }
 
-                    capeCacheIdentifier = new Identifier(MOD_ID, "capes_" + cape.toLowerCase(Locale.ROOT).replace(' ', '_').replaceAll("[^a-z0-9/._-]", ""));
+                    capeCacheIdentifier = Identifier.of(MOD_ID, "capes_" + cape.toLowerCase(Locale.ROOT).replace(' ', '_').replaceAll("[^a-z0-9/._-]", ""));
                     IdentifierUtils.registerBufferedImageTexture(capeCacheIdentifier, img);
                     lastCache = cape;
                 }
